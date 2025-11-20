@@ -56,6 +56,7 @@ Bu depo, **kavramsal anlatım** ve **örnek proje iskeleti** olmak üzere iki an
 - `multimedya-guvenligi-ai/`: Bu örnek proje yapısının **kodlanmış hâli**. İçinde Python kodları, eğitim ve çıkarım scriptleri bulunur.
 - `kümeler/`: Bilgi güvenliği, veri güvenliği ve siber güvenlik kavramlarını özetleyen destekleyici notlar.
 - `ransomware.md`, `stegonografi.md`, `usom.md`: İlgili güvenlik kavramlarını derinlemesine ele alan ek ders notları.
+ - `sifreleme/`, `erisim_control/`, `dijital_imzalama/`: Kriptografi, erişim kontrolü ve dijital imza konularını derinlemesine anlatan ve kendi içinde küçük Python demoları barındıran klasörler.
 
 Ek olarak:
 
