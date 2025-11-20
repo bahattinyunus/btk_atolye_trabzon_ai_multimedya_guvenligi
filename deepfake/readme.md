@@ -143,3 +143,25 @@ Bu depoda, deepfake tespitine yönelik basit bir YZ iskeleti örneği **`multime
 - `src/inference/predict_deepfake.py`: Örnek tahmin akışı
 
 Bu dokümandaki kavramları uygulamaya dökmek için bu kod iskeletini başlangıç noktası olarak kullanabilirsin.
+
+---
+
+## ▶️ Nasıl Çalıştırılır? (Kod Demoları)
+
+Bu klasörde, deepfake konu anlatımını destekleyen iki küçük Python demo dosyası vardır:
+
+- `train_demo.py` → `multimedya-guvenligi-ai/src/training/train_deepfake.py` içindeki `train()` fonksiyonunu çağırarak **dummy veri ile kısa bir eğitim demosu** çalıştırır.
+- `predict_demo.py` → `multimedya-guvenligi-ai/src/inference/predict_deepfake.py` içindeki `predict_video()` fonksiyonunu çağırarak **rastgele bir görüntü tensörü üzerinde dummy skor üretir**.
+
+Örnek kullanım (bu klasörden):
+
+```bash
+cd deepfake
+python train_demo.py
+
+python predict_demo.py
+```
+
+> Not: Kodların çalışması için aynı repoda `multimedya-guvenligi-ai/` projesi
+> bulunmalı ve oradaki `requirements.txt` dosyasındaki bağımlılıklar
+> kurulmuş olmalıdır.
