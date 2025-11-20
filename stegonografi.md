@@ -221,3 +221,50 @@ Stenografi, bilgiyi **gizli bir şekilde başka bir veri içinde saklama** sanat
 * **Transform domain, spread spectrum, masking gibi yöntemler**, daha güvenli ve dayanıklıdır, fakat karmaşık ve işlemci gücü gerektirir.
 * Ses ve video stenografisi, LSB mantığını medyanın türüne göre uyarlayarak gizli veri iletimi sağlar.
 
+
+
+# 📝 Stenografi: LSB ve Alternatif Yöntemler
+
+Stenografi, bilgiyi **gizli bir şekilde başka bir veri içinde saklama** sanatıdır. LSB (Least Significant Bit) yöntemi en bilinen yöntemdir, ama daha karmaşık ve gizli yöntemler de mevcuttur.
+
+---
+
+## 🔹 Görüntü Stenografisi Yöntemleri
+
+| Yöntem                               | Açıklama                                                         | Avantaj                                                 | Dezavantaj                                         |
+| ------------------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------- |
+| **LSB (Least Significant Bit)**      | Pikselin en düşük anlamlı bitini değiştirir.                     | Basit, hızlı, görsel kalite korunur.                    | Büyük mesajlar için yetersiz, kolay tespit edilir. |
+| **Palette-based**                    | Düşük renkli resimlerde renk paletini değiştirerek veri saklama. | Küçük dosyalar için ideal.                              | Palet değişirse veri bozulur.                      |
+| **Transform Domain (DCT, DWT, DFT)** | Dönüşüm katsayıları üzerine veri gömme.                          | Sıkıştırılmış formatlarda dayanıklı, fark edilmesi zor. | Karmaşık, işlemci gücü gerektirir.                 |
+| **Masking & Filtering**              | Önemli bölgelerde veri saklama (watermark için).                 | Görsel dikkat çekmez.                                   | Karmaşık, sınırlı kapasite.                        |
+| **Spread Spectrum**                  | Veriyi tüm resme yayarak küçük parçalar hâlinde saklama.         | Algılanması çok zor, dayanıklı.                         | İşlemci gücü gerektirir.                           |
+
+---
+
+## 🔹 Ses Stenografisi Yöntemleri
+
+| Yöntem              | Açıklama                                             | Avantaj           | Dezavantaj                 |
+| ------------------- | ---------------------------------------------------- | ----------------- | -------------------------- |
+| **LSB Ses**         | Ses dalgasının en düşük anlamlı bitlerini değiştirir | Basit, hızlı      | Ses kalitesi etkilenebilir |
+| **Phase Coding**    | Sesin fazını değiştirerek veri saklar                | Algılanması zor   | Karmaşık                   |
+| **Echo Hiding**     | Ses dalgasına hafif yankı ekler                      | Fark edilmesi zor | Ses kalitesi etkilenebilir |
+| **Spread Spectrum** | Veriyi frekans bandına yayar                         | Güçlü gizlilik    | Karmaşık, sınırlı kapasite |
+
+---
+
+## 🔹 Video Stenografisi Yöntemleri
+
+| Yöntem                         | Açıklama                                                             | Avantaj                       | Dezavantaj                       |
+| ------------------------------ | -------------------------------------------------------------------- | ----------------------------- | -------------------------------- |
+| **LSB Video**                  | Kare kare en düşük bitleri değiştirme                                | Basit, hızlı                  | Büyük mesajlar için yetersiz     |
+| **Transform Domain Video**     | Karelerin DCT/DWT katsayılarını kullanma                             | Dayanıklı, sıkıştırmaya uygun | Karmaşık, işlemci gücü gerekir   |
+| **Motion Vector Manipulation** | Video sıkıştırmasında hareket vektörlerini değiştirerek veri saklama | Algılanması zor, dayanıklı    | Çok karmaşık, büyük dosya boyutu |
+
+---
+
+### 🔹 Özet
+
+* **LSB**, basit ve hızlıdır, eğitim amaçlı ve küçük gizli veriler için uygundur.
+* **Transform domain, spread spectrum, masking gibi yöntemler**, daha güvenli ve dayanıklıdır, fakat karmaşık ve işlemci gücü gerektirir.
+* Ses ve video stenografisi, LSB mantığını medyanın türüne göre uyarlayarak gizli veri iletimi sağlar.
+
