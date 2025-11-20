@@ -131,3 +131,15 @@ deepfake-detection-project/
 * **results/**: Eğitim ve test sonuçları, grafikler ve loglar.
 * **scripts/**: Projeyi kolay çalıştırmak için hazır bash scriptleri.
 
+
+---
+
+## Uygulama İçin Bu Repodaki Örnek Proje
+
+Bu depoda, deepfake tespitine yönelik basit bir YZ iskeleti örneği **`multimedya-guvenligi-ai/`** klasöründe yer almaktadır. Özellikle:
+
+- `src/models/deepfake_detector.py`: Basit bir CNN tabanlı tespit modeli iskeleti
+- `src/training/train_deepfake.py`: Örnek eğitim döngüsü (dummy veri ile)
+- `src/inference/predict_deepfake.py`: Örnek tahmin akışı
+
+Bu dokümandaki kavramları uygulamaya dökmek için bu kod iskeletini başlangıç noktası olarak kullanabilirsin.

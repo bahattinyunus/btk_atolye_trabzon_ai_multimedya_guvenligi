@@ -56,3 +56,5 @@ multimedya-guvenligi-ai/
 ---
 
 Bu yapı, eğitim ve prototip geliştirme amaçlıdır; gerçek zamanlı sistemler veya ölçekli üretim için ek optimizasyon ve altyapı gereklidir.
+
+Bu repoda, yukarıdaki dizin yapısının bir örnek uygulaması **`multimedya-guvenligi-ai/`** klasörü altında yer almaktadır. Oradaki Python dosyaları ve scriptler, bu taslağın temel bir iskelet implementasyonunu sunar.
