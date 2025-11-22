@@ -2,10 +2,10 @@
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
 
 print("🌸 SVM İLE ÇİÇEK SINIFLANDIRMA - BAŞLIYORUZ!")
 print("=" * 50)
@@ -30,7 +30,7 @@ print("\n📊 SINIF DAĞILIMI:")
 for i, tur in enumerate(iris.target_names):
     sayi = sum(y == i)
     print(f"  {tur}: {sayi} çiçek")
-
+i
 # 2. VERİYİ HAZIRLA
 print("\n2. VERİYİ HAZIRLIYORUM...")
 # Veriyi standardize et (SVM için önemli!)
@@ -41,10 +41,11 @@ print("✓ Veri standardizasyonu tamamlandı")
 # 3. VERİYİ BÖL
 print("\n3. VERİYİ EĞİTİM VE TEST OLARAK BÖLÜYORUM...")
 X_train, X_test, y_train, y_test = train_test_split(
-    X_scaled, y,
+    X_scaled,
+    y,
     test_size=0.2,
     random_state=42,
-    stratify=y  # Sınıf dağılımını koru
+    stratify=y,  # Sınıf dağılımını koru
 )
 
 print(f"✓ Eğitim seti: {X_train.shape[0]} çiçek")
@@ -52,7 +53,7 @@ print(f"✓ Test seti: {X_test.shape[0]} çiçek")
 
 # 4. SVM MODELİNİ OLUŞTUR VE EĞİT
 print("\n4. SVM MODELİNİ EĞİTİYORUM...")
-model = SVC(kernel='rbf', C=1.0, random_state=42)
+model = SVC(kernel="rbf", C=1.0, random_state=42)
 model.fit(X_train, y_train)
 print("✓ Model eğitimi tamamlandı")
 
@@ -82,10 +83,10 @@ print(f"✓ Destek vektör oranı: {len(model.support_vectors_) / len(X_train):.
 
 # 7. FARKLI ÇEKİRDEKLERİ DENEYELİM
 print("\n7. FARKLI ÇEKİRDEKLERİ KARŞILAŞTIRIYORUM...")
-cekirdekler = ['linear', 'rbf', 'poly']
+cekirdekler = ["linear", "rbf", "poly"]
 
 for cekirdek in cekirdekler:
-    if cekirdek == 'poly':
+    if cekirdek == "poly":
         gecici_model = SVC(kernel=cekirdek, degree=3, random_state=42)
     else:
         gecici_model = SVC(kernel=cekirdek, random_state=42)
@@ -99,7 +100,7 @@ print("\n8. C PARAMETRESİNİ TEST EDİYORUM...")
 C_degerleri = [0.1, 1, 10, 100]
 
 for C in C_degerleri:
-    gecici_model = SVC(kernel='rbf', C=C, random_state=42)
+    gecici_model = SVC(kernel="rbf", C=C, random_state=42)
     gecici_model.fit(X_train, y_train)
     skor = gecici_model.score(X_test, y_test)
     print(f"  C = {C:4}: {skor:.1%} doğru")
@@ -132,7 +133,7 @@ for i, deger in enumerate(tahmin_olasilik[0]):
 # 10. ÖZELLİK ÖNEMİ
 print("\n10. ÖZELLİK ÖNEM ANALİZİ:")
 # Linear kernel ile özellik önemlerini hesapla
-linear_model = SVC(kernel='linear', random_state=42)
+linear_model = SVC(kernel="linear", random_state=42)
 linear_model.fit(X_train, y_train)
 
 print("📈 ÖZELLİKLERİN ÖNEM SIRALAMASI:")
