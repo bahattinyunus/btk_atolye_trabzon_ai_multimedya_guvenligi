@@ -1,10 +1,13 @@
 <div align="center">
 
-# Multimedya Veri Güvenliğinde Yapay Zeka
+# 🛡️ Multimedya Veri Güvenliğinde Yapay Zeka
 
 _BTK Atölye • Multimedya Güvenliği • Eğitim ve Örnek Proje Repo_
 
-`status: eğitim` · `konu: multimedya güvenliği` · `teknoloji: yapay zeka`
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Eğitim-orange?style=for-the-badge)
 
 </div>
 
@@ -28,14 +31,14 @@ Bu repo;
 
 bir araya getirir.
 
-Hem teori hem de pratik (kod) içeren bir eğitim seti olarak
-düşünülebilir.
+Hem teori hem de pratik (kod) içeren bir eğitim seti olarak düşünülebilir.
 
 ---
 
 ## 📚 İçindekiler
 
-- [📂 Bu Repoda Neler Var?](#-bu-repoda-neler-var)
+- [📂 Proje Yapısı](#-proje-yapısı)
+- [🛠️ Kurulum ve Kullanım](#️-kurulum-ve-kullanım)
 - [🎯 1. Yapay Zeka ve Veri Güvenliğinin Kesişimi](#-1-yapay-zeka-ve-veri-güvenliğinin-kesişimi)
 - [🔐 2. YZ'nin Kullanıldığı Temel Alanlar](#-2-yznin-kullanıldığı-temel-alanlar)
 - [🧠 3. Kullanılan Yapay Zeka Modelleri](#-3-kullanılan-yapay-zeka-modelleri)
@@ -46,30 +49,54 @@ düşünülebilir.
 
 ---
 
-## 📂 Bu Repoda Neler Var?
+## 📂 Proje Yapısı
 
-Bu depo, **kavramsal anlatım** ve **örnek proje iskeleti** olmak üzere iki ana parçadan oluşur:
+```
+btk_atolye_multimedya_guvenligi/
+├── 📂 eğitim_kodları/          # Makine öğrenmesi ve CNN örnekleri
+│   ├── 📄 10_cnnDenemesi.py    # CNN ile görüntü sınıflandırma (CIFAR-10)
+│   └── 📄 ...                  # Diğer ML algoritmaları (Regresyon, SVM, vb.)
+├── 📂 multimedya-guvenligi-ai/ # Örnek proje iskeleti
+├── 📂 deepfake/                # Deepfake notları ve örnekleri
+├── 📂 stegonografi/            # Steganografi notları
+├── 📄 colab_turuba_rehberi.md  # Colab ve Turuba kullanım rehberi
+├── 📄 requirements.txt         # Gerekli kütüphaneler
+└── 📄 readme.md                # Ana dokümantasyon (Bu dosya)
+```
 
-- `readme.md` (bu dosya): Multimedya veri güvenliğinde YZ'nin rolünü anlatan ana eğitim dokümanı.
-- `deepfake/readme.md`: Deepfake teknolojisi ve tespit yöntemleri için detaylı konu anlatımı ve örnek proje yapısı.
-- `ornek_proje.md`: "Multimedya Veri Güvenliğinde YZ" için örnek klasör ve dosya yapısını tarif eden taslak.
-- `multimedya-guvenligi-ai/`: Bu örnek proje yapısının **kodlanmış hâli**. İçinde Python kodları, eğitim ve çıkarım scriptleri bulunur.
-- `kümeler/`: Bilgi güvenliği, veri güvenliği ve siber güvenlik kavramlarını özetleyen destekleyici notlar.
-- `ransomware.md`, `stegonografi.md`, `usom.md`: İlgili güvenlik kavramlarını derinlemesine ele alan ek ders notları.
-- `colab_turuba_rehberi.md`: Google Colab ve Turuba platformlarında model eğitimi rehberi.
- - `sifreleme/`, `erisim_control/`, `dijital_imzalama/`: Kriptografi, erişim kontrolü ve dijital imza konularını derinlemesine anlatan ve kendi içinde küçük Python demoları barındıran klasörler.
+---
 
-Ek olarak:
+## 🛠️ Kurulum ve Kullanım
 
-- `tehditler.md`: Multimedya ve genel siber güvenlik bağlamındaki
-  tehdit türlerini (ör. ransomware, phishing, zararlı yazılım,
-  ağ saldırıları vb.) özetleyen destekleyici bir dosya.
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-Öğrenme akışını şu şekilde takip edebilirsin:
+### 1. Repoyu Klonlayın
+```bash
+git clone https://github.com/bahattinyunus/btk_atolye_multimedya_guvenligi.git
+cd btk_atolye_multimedya_guvenligi
+```
 
-1. Bu dosyayı (`readme.md`) okuyarak YZ + multimedya güvenliği çerçevesini gör.
-2. Konu özelinde derinleşmek için `deepfake/`, `ransomware.md`, `stegonografi.md`, `usom.md` dosyalarına bak.
-3. Uygulama yapmak istiyorsan `ornek_proje.md` ve `multimedya-guvenligi-ai/` içindeki kod yapısını kullan.
+### 2. Sanal Ortam Oluşturun (Önerilen)
+```bash
+python -m venv venv
+# Windows için:
+venv\Scripts\activate
+# Mac/Linux için:
+source venv/bin/activate
+```
+
+### 3. Gerekli Kütüphaneleri Yükleyin
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Örnek Kodları Çalıştırın
+Örneğin, CNN modelini eğitmek ve test etmek için:
+```bash
+cd eğitim_kodları
+python 10_cnnDenemesi.py
+```
+*Not: Bu kod CIFAR-10 veri setini otomatik olarak indirecektir.*
 
 ---
 
@@ -89,7 +116,7 @@ Multimedya veri güvenliğinde YZ'nin hedefleri:
 
 ## 🔐 **2. YZ'nin Kullanıldığı Temel Alanlar**
 
-### ### **2.1. Anomali Tespiti (Anomaly Detection)**
+### **2.1. Anomali Tespiti (Anomaly Detection)**
 
 Multimedya sunucularındaki olağan dışı dosya hareketlerini YZ otomatik olarak algılayabilir.
 
