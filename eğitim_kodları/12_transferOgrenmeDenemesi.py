@@ -90,7 +90,8 @@ all_labels = []   # Gerçek etiketler
 # Hızlı test için sadece 1 epoch yapıyoruz
 for epoch in range(1):
     print(f"Epoch {epoch+1}/1 Başlıyor...")
-    for images, labels in train_loader:
+    for i, (images, labels) in enumerate(train_loader):
+        if i > 50: break # Hızlı test için sadece 50 batch çalıştır
         images, labels = images.to(device), labels.to(device)  # Veriyi cihaza aktar (GPU/CPU)
 
         outputs = model(images)                # Model üzerinden tahmin al
@@ -136,7 +137,8 @@ all_labels = []
 
 # Gradyan takibi kapalıyken doğrulama yapılır (daha az bellek kullanımı)
 with torch.no_grad():
-    for images, labels in val_loader:
+    for i, (images, labels) in enumerate(val_loader):
+        if i > 10: break # Hızlı test için sadece 10 batch doğrula
         images, labels = images.to(device), labels.to(device)  # Veriyi cihaza aktar
 
         outputs = model(images)              # Tahmin üret

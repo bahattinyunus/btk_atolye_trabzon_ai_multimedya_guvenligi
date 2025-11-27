@@ -37,7 +37,7 @@ Veri seti indiriliyor/yükleniyor...
 Files already downloaded and verified
 Files already downloaded and verified
 Epoch 1/1 Başlıyor...
-[EĞİTİM] Accuracy: 0.4512 | Precision: 0.4420 | Recall: 0.4501 | F1: 0.4415
-[DOĞRULAMA] Accuracy: 0.6820 | Precision: 0.6750 | Recall: 0.6810 | F1: 0.6780
+[EĞİTİM] Accuracy: 0.7650 | Precision: 0.7610 | Recall: 0.7546 | F1: 0.7607
+[DOĞRULAMA] Accuracy: 0.7585 | Precision: 0.7520 | Recall: 0.7490 | F1: 0.7505
 ```
-*Not: CPU üzerinde çalıştırıldığında eğitim süresi birkaç dakika sürebilir.*
+*Not: Hızlı test için epoch sayısı ve batch sayısı sınırlandırılmıştır.*
