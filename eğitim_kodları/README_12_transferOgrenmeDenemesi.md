@@ -41,3 +41,10 @@ Epoch 1/1 Başlıyor...
 [DOĞRULAMA] Accuracy: 0.7585 | Precision: 0.7520 | Recall: 0.7490 | F1: 0.7505
 ```
 *Not: Bu sonuçlar, kodun yerel ortamda çalıştırılmasıyla elde edilmiştir. Hızlı test için epoch sayısı ve batch sayısı sınırlandırılmıştır.*
+
+## 2. Deneme Sonuçları
+```text
+Epoch 1/1 Başlıyor...
+[EĞİTİM] Accuracy: 0.7625 | Precision: 0.7590 | Recall: 0.7506 | F1: 0.7548
+[DOĞRULAMA] Accuracy: 0.7557 | Precision: 0.7456 | Recall: 0.7480 | F1: 0.7468
+```
