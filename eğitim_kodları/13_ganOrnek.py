@@ -22,18 +22,23 @@ if not os.path.exists("veriler"):
 
 # Görüntüleri indir (eğer yoksa) ve yollarını al
 content_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/YellowLabradorLooking_new.jpg"
-style_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg"
+# Eski Stil: Kandinsky
+# style_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg"
+# Yeni Stil: Grace Hopper (Farklı bir görsel etkisi için)
+# Wikimedia 403 verdiği için TF storage'dan başka bir örnek kullanıyoruz.
+style_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/grace_hopper.jpg"
 
 print("Content görüntüsü hazırlanıyor...")
 CONTENT_IMAGE_PATH = tf.keras.utils.get_file("YellowLabradorLooking_new.jpg", content_url)
 print(f"Content path: {CONTENT_IMAGE_PATH}")
 
 print("Style görüntüsü hazırlanıyor...")
-STYLE_IMAGE_PATH = tf.keras.utils.get_file("kandinsky5.jpg", style_url)
+# Dosya adını da değiştirelim ki karışmasın
+STYLE_IMAGE_PATH = tf.keras.utils.get_file("grace_hopper.jpg", style_url)
 print(f"Style path: {STYLE_IMAGE_PATH}")
 
 # Stil uygulanmış sonucu kaydedeceğimiz çıktı dosyasının adı.
-OUTPUT_IMAGE_PATH = "veriler/output.jpg"
+OUTPUT_IMAGE_PATH = "veriler/output_grace.jpg"
 
 
 # ------------------------------------------------------ #
