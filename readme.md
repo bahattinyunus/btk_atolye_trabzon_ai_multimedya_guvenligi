@@ -64,7 +64,8 @@ btk_atolye_multimedya_guvenligi/
 │   │   ├── 📄 13_ganOrnek.py
 │   │   ├── 📄 14_ganSahteYuz.py
 │   │   ├── 📄 15_difuzyonSahteYuz.py
-│   │   └── 📄 16_siftOrnek.py      # SIFT ile Özellik Çıkarımı
+│   │   ├── 📄 16_siftOrnek.py      # SIFT ile Özellik Çıkarımı
+│   │   └── 📄 17_exifOrnek.py      # EXIF Analizi ile Sahtecilik İpuçları
 │   └── 📂 veriler/             # Ortak veri klasörü
 ├── 📂 multimedya-guvenligi-ai/ # Örnek proje iskeleti
 ├── 📂 deepfake/                # Deepfake notları ve örnekleri

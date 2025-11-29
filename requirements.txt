@@ -11,3 +11,6 @@ diffusers
 transformers
 accelerate
 safetensors
+librosa
+soundfile
+scikit-image
