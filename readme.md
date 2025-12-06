@@ -254,4 +254,5 @@ YZ ile güvenliği artırılmış bir video platformunda:
 Yapay zeka, multimedya veri güvenliğinde artık opsiyonel bir teknoloji değil—mecburi hale gelmiş güçlü bir koruma katmanıdır. Hem tehditleri tespit etme hem de içerik güvenliğini sağlama konusunda geleceğin omurgasını oluşturur.
 
 Hazırlanan bu README, eğitim amacıyla derli toplu ve uygulamaya dönük bir çerçeve sunar.
+.
 
