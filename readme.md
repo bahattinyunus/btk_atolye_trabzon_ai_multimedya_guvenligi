@@ -10,7 +10,7 @@ _BTK Atölye • Multimedya Güvenliği • Eğitim ve Örnek Proje Repo_
 ![Status](https://img.shields.io/badge/Status-Eğitim-orange?style=for-the-badge)
 
 </div>
-
+.
 ---
 
 > **EN (short summary)**: This repository combines lecture notes and
