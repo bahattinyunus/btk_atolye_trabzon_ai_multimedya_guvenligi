@@ -1,17 +1,28 @@
+<div align="center">
+
+![Colab Guide Banner](assets/colab-guide-banner.png)
+
 # 🚀 Colab ve Turuba Model Eğitimi Rehberi
 
-Bu dokümantasyon, **Google Colab** ve **Turuba** platformlarında makine öğrenmesi model eğitimi hakkında kapsamlı bilgi sağlar.
+_Google Colab ve Turuba platformlarında makine öğrenmesi model eğitimi için kapsamlı rehber._
+
+[![Platform](https://img.shields.io/badge/Platform-Colab%20%7C%20Turuba-orange?style=for-the-badge&logo=googlecolab&logoColor=white)]()
+[![Rehber](https://img.shields.io/badge/Tür-Eğitim%20Rehberi-blue?style=for-the-badge)]()
+
+</div>
+
+---
 
 ## 📋 İçindekiler
 
-- [Google Colab Nedir?](#google-colab-nedir)
-- [Turuba Nedir?](#turuba-nedir)
-- [Platform Karşılaştırması](#platform-karşılaştırması)
-- [Colab Kullanım Rehberi](#colab-kullanım-rehberi)
-- [Turuba Kullanım Rehberi](#turuba-kullanım-rehberi)
-- [Model Eğitimi Best Practices](#model-eğitimi-best-practices)
-- [Maliyet Analizi](#maliyet-analizi)
-- [Troubleshooting](#troubleshooting)
+- [Google Colab Nedir?](#-google-colab-nedir)
+- [Turuba Nedir?](#-turuba-nedir)
+- [Platform Karşılaştırması](#️-platform-karşılaştırması)
+- [Colab Kullanım Rehberi](#-colab-kullanım-rehberi)
+- [Turuba Kullanım Rehberi](#-turuba-kullanım-rehberi)
+- [Model Eğitimi Best Practices](#-model-eğitimi-best-practices)
+- [Maliyet Analizi](#-maliyet-analizi)
+- [Troubleshooting](#-troubleshooting)
 
 ## 🌟 Google Colab Nedir?
 

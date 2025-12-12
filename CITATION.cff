@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Yunus"
+  given-names: "Bahattin"
+title: "BTK Atölye Multimedya Güvenliği ve Yapay Zeka"
+version: 1.0.0
+date-released: 2024-01-01
+url: "https://github.com/bahattinyunus/btk_atolye_multimedya_guvenligi"
