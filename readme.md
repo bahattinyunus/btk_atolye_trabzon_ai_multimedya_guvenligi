@@ -25,8 +25,9 @@ _BTK Atölye • Multimedya Güvenliği • Eğitim ve Örnek Proje Repo_
 Bu repo, multimedya güvenliği ve yapay zeka kesişimindeki konuları ele alan kapsamlı bir eğitim kaynağıdır:
 
 *   **Ders Notları**: Multimedya güvenliğinde YZ'nin rolü.
-*   **Konu Özetleri**: Deepfake, steganografi, ransomware, USOM.
+*   **Konu Özetleri**: [Deepfake](deepfake/README.md), [Steganografi](stegonografi/README.md), [Ransomware](docs/ransomware.md), [USOM](docs/usom.md).
 *   **Örnek Kodlar**: `multimedya-guvenligi-ai/` altında uygulama iskeletleri.
+
 
 Hem teorik bilgi hem de pratik kod uygulamaları (CNN, GAN, Autoencoder vb.) içerir.
 
