@@ -114,7 +114,6 @@ Yüz manipülasyonlarını, göz kırpma düzensizliklerini ve "texture artifact
 ### 3. Steganografi ve Filigran
 Görünmez verileri resim içine saklama veya saklanmış verileri (gizli mesaj, virüs) tespit etme.
 
-
 ---
 
 <div align="center">
@@ -127,15 +126,11 @@ Görünmez verileri resim içine saklama veya saklanmış verileri (gizli mesaj,
 
 ## 🤖 Kullanılan Modeller
 
-
 | Alan | Model | Amaç |
 |------|-------|------|
 | **Görüntü İşleme** | CNN, ResNet | İçerik sınıflandırma ve deepfake analizi |
 | **Anomali** | Autoencoder, LSTM | Davranış analizi ve tehdit tespiti |
 | **Generative** | GAN, Diffusion | Filigran üretimi ve sentetik veri |
-
----
-
 
 ---
 
