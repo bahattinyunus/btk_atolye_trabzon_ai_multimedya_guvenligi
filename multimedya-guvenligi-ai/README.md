@@ -1,10 +1,14 @@
 <div align="center">
 
-# Multimedya Güvenliğinde Yapay Zeka · Örnek Proje
+![Project Concept](../assets/project-concept.png)
+
+# 🧠 Multimedya Güvenliğinde Yapay Zeka · Örnek Proje
 
 _Deepfake tespiti · LSB steganografi · Watermarking GAN · Anomali tespiti_
 
-`durum: iskelet proje` · `dil: Python` · `amaç: eğitim`
+[![Status](https://img.shields.io/badge/Durum-İskelet-blue?style=for-the-badge&logo=github)]()
+[![Python](https://img.shields.io/badge/Python-3.8%2B-orange?style=for-the-badge&logo=python&logoColor=white)]()
+[![Model](https://img.shields.io/badge/Model-CNN%20%2B%20GAN-purple?style=for-the-badge)]()
 
 </div>
 
