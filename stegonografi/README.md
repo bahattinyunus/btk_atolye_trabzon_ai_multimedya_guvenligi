@@ -1,87 +1,17 @@
-Tamam, işte **stenografi** ve içinde **LSB (Least Significant Bit) yöntemi** de geçen bir öğretici Markdown dosyası:
+<div align="center">
 
----
+![Steganography Concept](../assets/stego-concept.png)
 
 # 📝 Stenografi ve LSB Yöntemi
 
-Stenografi, bilgiyi **gizli bir şekilde başka bir veri içinde saklama** sanatıdır. Ransomware, veri güvenliği veya multimedya projelerinde sıkça karşılaşabileceğimiz bu teknik, özellikle gizlilik ve dijital veri saklama konularında önemlidir.
+*Gizli Veri Saklama Sanatı*
+
+</div>
 
 ---
 
-## 🔹 Stenografi Nedir?
-
-* Kelime anlamı: “Gizli yazı”.
-* Temel amaç: Veriyi **görünmez** veya **fark edilmeyecek şekilde** başka bir veri içerisine gömmek.
-* Kullanım alanları:
-
-  * Dijital iletişimde gizlilik
-  * Telif hakkı bilgilerini saklama (watermark)
-  * Bilgi güvenliği eğitimleri
-  * Malware veya siber saldırılar
 
 ---
-
-## 🔹 Stenografi Yöntemleri
-
-### 1. **Metin Stenografisi**
-
-* Boşluk, tab veya özel karakterler kullanılır.
-* Örnek: Her satırın sonuna gizli mesajın harfleri eklenebilir.
-
-### 2. **Görüntü Stenografisi**
-
-* Dijital resimlerde piksel değerleri kullanılır.
-* En yaygın yöntem: **LSB (Least Significant Bit) yöntemi**
-
----
-
-## 🔹 LSB (Least Significant Bit) Yöntemi
-
-### 🔹 Nedir?
-
-* Her pikselin rengi genellikle **RGB (Red, Green, Blue)** olarak saklanır.
-* Her renk kanalı 8 bitlik değere sahiptir (0–255).
-* **LSB**, en düşük anlamlı bit demektir (0 veya 1).
-* Bu bit, insan gözüyle fark edilmeyecek kadar önemsizdir.
-
-### 🔹 Nasıl Çalışır?
-
-1. Gizli mesajın her biti alınır.
-2. Görüntüdeki her pikselin **en düşük anlamlı bitine** bu bit yerleştirilir.
-3. Tüm mesaj gömülene kadar devam edilir.
-4. Görüntü neredeyse **orijinalinden farksız** kalır.
-
-**Örnek:**
-
-| Orijinal Renk (RGB)            | Bit Değişimi          | Yeni Renk (RGB)                            |
-| ------------------------------ | --------------------- | ------------------------------------------ |
-| (10101100, 11001001, 11100010) | 0,1,1 (mesaj bitleri) | (1010110**0**, 1100100**1**, 1110001**1**) |
-
-* İnsan gözüyle fark edilmez ama mesaj geri çıkarılabilir.
-
----
-
-## 🔹 Avantajları
-
-* Çok az veri kaybı.
-* Görüntü kalitesi neredeyse değişmez.
-* Gizli mesaj görünmez.
-
-## 🔹 Dezavantajları
-
-* Büyük mesajlar için çok fazla piksel gerekir.
-* Görüntü sıkıştırılırsa (JPEG gibi), mesaj bozulabilir.
-* Tespit edildiğinde mesaj açığa çıkabilir.
-
----
-
-## 🔹 Uygulama Alanları
-
-* Dijital watermark (telif hakkı işaretleme)
-* Gizli mesaj iletimi
-* Bilgi güvenliği projelerinde eğitim amaçlı deneyler
-* Saldırı simülasyonları
-
 
 # 📝 Stenografi Yöntemleri ve LSB
 

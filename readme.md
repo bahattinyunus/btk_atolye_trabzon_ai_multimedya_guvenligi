@@ -126,7 +126,59 @@ Görünmez verileri resim içine saklama veya saklanmış verileri (gizli mesaj,
 
 ---
 
+
+---
+
+## 🔐 Nasıl Çalışır? (Architecture)
+
+Aşağıdaki diyagram, bu repoda ele alınan güvenlik modelinin genel akışını gösterir:
+
+```mermaid
+graph TD
+    A[Multimedya İçeriği] -->|Giriş| B(Ön İşleme)
+    B --> C{Tehdit Tespiti?};
+    
+    C -->|Deepfake Analizi| D[CNN / ViT Modeli]
+    C -->|Anomali Tespiti| E[Autoencoder / LSTM]
+    C -->|Zararlı İçerik| F[Malware Scanner]
+    
+    D --> G{Bozulma Var mı?}
+    E --> G
+    
+    G -->|Evet| H[🚫 Erişim Engelle / Uyar]
+    G -->|Hayır| I[✅ Güvenli İçerik]
+    
+    I --> J[Filigran Ekleme (GAN/LSB)]
+    J --> K[Yayınla / Sakla]
+    
+    style A fill:#f9f,stroke:#333
+    style H fill:#f00,stroke:#333,color:white
+    style I fill:#0f0,stroke:#333
+```
+
+---
+
+## 🗺️ Proje Yol Haritası (Roadmap)
+
+- [x] **Faz 1: Temel Güvenlik Modülleri** (Tamamlandı)
+    - [x] Temel ML algoritmaları
+    - [x] Basit GAN modelleri
+    - [x] CNN ile sınıflandırma
+
+- [ ] **Faz 2: İleri Seviye Tespit** (Devam Ediyor)
+    - [ ] Real-time Deepfake tespiti
+    - [ ] Ses manipülasyonu analizi
+    - [ ] Adversarial Attack savunması
+
+- [ ] **Faz 3: Entegrasyon**
+    - [ ] Web Arayüzü (Dashboard)
+    - [ ] API Servisi
+    - [ ] Browser Eklentisi
+
+---
+
 ## 🤝 Katkıda Bulunma
+
 
 Bu proje açık kaynaklı bir eğitim projesidir. Katkılarınızı bekliyoruz!
 
