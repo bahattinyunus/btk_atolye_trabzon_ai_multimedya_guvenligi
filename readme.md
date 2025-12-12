@@ -114,9 +114,19 @@ Yüz manipülasyonlarını, göz kırpma düzensizliklerini ve "texture artifact
 ### 3. Steganografi ve Filigran
 Görünmez verileri resim içine saklama veya saklanmış verileri (gizli mesaj, virüs) tespit etme.
 
+
+---
+
+<div align="center">
+
+![Analysis Banner](assets/mid-banner.png)
+
+</div>
+
 ---
 
 ## 🤖 Kullanılan Modeller
+
 
 | Alan | Model | Amaç |
 |------|-------|------|
