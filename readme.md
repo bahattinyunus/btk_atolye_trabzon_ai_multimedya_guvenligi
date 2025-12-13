@@ -46,25 +46,27 @@ Aşağıdaki şema, atölye kapsamında geliştirilen genel güvenlik mimarisini
 
 ```mermaid
 graph TD
-    A[🎥 Multimedya Girdisi] -->|Görüntü/Ses/Video| B(⚙️ Ön İşleme)
-    B --> C{🔍 Analiz Katmanı}
+    A["🎥 Multimedya Girdisi"] -->|Görüntü/Ses/Video| B("⚙️ Ön İşleme")
+    B --> C{"🔍 Analiz Katmanı"}
     
-    subgraph "Yapay Zeka Modelleri"
-    C -->|Sahtecilik Tespiti| D[Deepfake Dedektörü (CNN/ViT)]
-    C -->|Anomali Tespiti| E[Autoencoder Ağları]
+    subgraph AI_Models ["Yapay Zeka Modelleri"]
+    direction TB
+    C -->|Sahtecilik Tespiti| D["Deepfake Dedektörü (CNN/ViT)"]
+    C -->|Anomali Tespiti| E["Autoencoder Ağları"]
     end
     
-    D --> F{Sonuç?}
+    D --> F{"Sonuç?"}
     E --> F
     
-    F -->|⚠️ Tehdit Var| G[Blokla ve Raporla]
-    F -->|✅ Temiz| H[Güvenli İçerik]
+    F -->|⚠️ Tehdit Var| G["Blokla ve Raporla"]
+    F -->|✅ Temiz| H["Güvenli İçerik"]
     
-    H --> I[🛡️ Filigran Ekle (Watermark)]
-    I --> J[💾 Güvenli Depolama]
+    H --> I["🛡️ Filigran Ekle (Watermark)"]
+    I --> J["💾 Güvenli Depolama"]
     
     style A fill:#f9f,stroke:#333
     style G fill:#f00,color:white,stroke:#333
+    style J fill:#0f0,stroke:#333
     style J fill:#0f0,stroke:#333
 ```
 
