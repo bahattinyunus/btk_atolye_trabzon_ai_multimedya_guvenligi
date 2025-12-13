@@ -1,5 +1,7 @@
 <div align="center">
 
+![BTK Akademi Logo](https://assets-btkakademi-gov-tr.akamaized.net/api/service/v1/public/51/assets/logo.png?ts=1738148275127)
+
 ![BTK Akademi Workshop Banner](assets/header-banner.png)
 
 # 🛡️ Multimedya Veri Güvenliğinde Yapay Zeka
@@ -99,8 +101,8 @@ Atölye materyallerini bilgisayarınızda çalıştırmak için aşağıdaki ad�
 
 ### 1. Repoyu Klonlayın
 ```bash
-git clone https://github.com/bahattinyunus/btk_atolye_multimedya_guvenligi.git
-cd btk_atolye_multimedya_guvenligi
+git clone https://github.com/bahattinyunus/btk_atolye_trabzon_ai_multimedya_guvenligi.git
+cd btk_atolye_trabzon_ai_multimedya_guvenligi
 ```
 
 ### 2. Sanal Ortam (Önerilen)
