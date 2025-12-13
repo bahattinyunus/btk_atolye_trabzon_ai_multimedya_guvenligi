@@ -1,68 +1,101 @@
 <div align="center">
 
-![Multimedia Security AI Banner](assets/header-banner.png)
+![BTK Akademi Workshop Banner](assets/header-banner.png)
 
 # 🛡️ Multimedya Veri Güvenliğinde Yapay Zeka
-
-_BTK Atölye • Multimedya Güvenliği • Eğitim ve Örnek Proje Repo_
+### _BTK Akademi • Trabzon Atölyesi_
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![BTK Akademi](https://img.shields.io/badge/BTK-Akademi-red?style=for-the-badge)](https://www.btkakademi.gov.tr/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Eğitim-orange?style=for-the-badge)]()
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
 
 </div>
 
 ---
 
-> **Note**: This repository combines lecture notes and example Python code about using AI for multimedia security (deepfake detection, steganography, watermarking, anomaly detection, and basic crypto / access control). It is designed as a **teaching resource**, not a production-ready system.
+## 🚀 Atölye Hakkında
+
+Bu proje, **BTK Akademi** iş birliğiyle **Trabzon'da** gerçekleştirilen **"Multimedya Veri Güvenliğinde Yapay Zekâ Kullanımı"** atölye çalışmasının resmi kaynak kodlarını ve eğitim materyallerini içerir.
+
+Atölye süresince katılımcılarla birlikte; yapay zekanın siber güvenlikteki çift yönlü rolü (saldırı ve savunma) incelenmiş, **Deepfake tespiti**, **dijital filigranlama (watermarking)** ve **adversarial örnekler** konuları uygulamalı olarak işlenmiştir.
+
+> **Amaç:** Katılımcıların, multimedya verileri üzerindeki manipülasyonları tespit edebilen ve kendi güvenli yapay zeka modellerini eğitebilen yetkinliğe ulaşmasıdır.
 
 ---
 
-## 🔍 Proje Hakkında (TL;DR)
+## 🎓 Eğitim İçeriği ve Modüller
 
-Bu repo, multimedya güvenliği ve yapay zeka kesişimindeki konuları ele alan kapsamlı bir eğitim kaynağıdır:
+Proje, atölye müfredatına uygun olarak aşağıdaki temel modüllere ayrılmıştır:
 
-*   **Ders Notları**: Multimedya güvenliğinde YZ'nin rolü.
-*   **Konu Özetleri**: [Deepfake](deepfake/README.md), [Steganografi](stegonografi/README.md), [Ransomware](docs/ransomware.md), [USOM](docs/usom.md).
-*   **Örnek Kodlar**: `multimedya-guvenligi-ai/` altında uygulama iskeletleri.
-
-
-Hem teorik bilgi hem de pratik kod uygulamaları (CNN, GAN, Autoencoder vb.) içerir.
-
-## 📚 İçindekiler
-
-1.  [Proje Yapısı](#-proje-yapısı)
-2.  [Kurulum ve Kullanım](#️-kurulum-ve-kullanım)
-3.  [Yapay Zeka ve Veri Güvenliği](#-yapay-zeka-ve-veri-güvenliği)
-4.  [Uygulama Alanları](#-uygulama-alanları)
-5.  [Kullanılan Modeller](#-kullanılan-modeller)
-6.  [Katkıda Bulunma](#-katkıda-bulunma)
+| Modül | İçerik | Uygulamalar |
+| :--- | :--- | :--- |
+| **🧠 1. Temel ML & AI** | Yapay Zekaya Giriş | Regresyon, Sınıflandırma, Python ile ML |
+| **👁️ 2. Deep Learning** | CNN ve Görsel Analiz | Görüntü Sınıflandırma, Transfer Learning |
+| **🕵️ 3. Deepfake Analizi** | Sahte İçerik Tespiti | Yüz Manipülasyonu Tespiti, MesoNet Mimarisi |
+| **🎨 4. Generative AI** | Üretken Modeller | GANs, Diffusion Models, Style Transfer |
+| **🔐 5. Veri Güvenliği** | Koruma Yöntemleri | Steganografi, Filigran (Watermark) Ekleme |
 
 ---
 
-## 📂 Proje Yapısı
+## 🏗️ Proje Mimarisi
+
+Aşağıdaki şema, atölye kapsamında geliştirilen genel güvenlik mimarisini özetlemektedir:
+
+```mermaid
+graph TD
+    A[🎥 Multimedya Girdisi] -->|Görüntü/Ses/Video| B(⚙️ Ön İşleme)
+    B --> C{🔍 Analiz Katmanı}
+    
+    subgraph "Yapay Zeka Modelleri"
+    C -->|Sahtecilik Tespiti| D[Deepfake Dedektörü (CNN/ViT)]
+    C -->|Anomali Tespiti| E[Autoencoder Ağları]
+    end
+    
+    D --> F{Sonuç?}
+    E --> F
+    
+    F -->|⚠️ Tehdit Var| G[Blokla ve Raporla]
+    F -->|✅ Temiz| H[Güvenli İçerik]
+    
+    H --> I[🛡️ Filigran Ekle (Watermark)]
+    I --> J[💾 Güvenli Depolama]
+    
+    style A fill:#f9f,stroke:#333
+    style G fill:#f00,color:white,stroke:#333
+    style J fill:#0f0,stroke:#333
+```
+
+---
+
+<div align="center">
+
+![Analysis Concept](assets/mid-banner.png)
+
+</div>
+
+---
+
+## 📂 Dosya Yapısı
 
 ```
 btk_atolye_multimedya_guvenligi/
-├── 📂 assets/                  # Proje görselleri
-├── 📂 eğitim_kodları/          # Makine öğrenmesi ve CNN örnekleri
-│   ├── 01_Temel_ML/            # Regresyon, Sınıflandırma
-│   ├── 02_Derin_Ogrenme/       # CNN, Transfer Learning
-│   └── 03_Generative_AI/       # GAN, Diffusion, SIFT, EXIF
-├── 📂 multimedya-guvenligi-ai/ # Örnek proje iskeleti
-├── 📂 deepfake/                # Deepfake notları ve araştırmaları
-├── 📂 stegonografi/            # Steganografi teknikleri
-├── 📄 colab_turuba_rehberi.md  # Colab kullanım rehberi
-└── 📄 requirements.txt         # Bağımlılıklar
+├── 📂 eğitim_kodları/          # Atölye sırasında yazılan kodlar
+│   ├── 01_Temel_ML/            # Makine Öğrenmesi temelleri
+│   ├── 02_Derin_Ogrenme/       # CNN ve DL uygulamaları
+│   └── 03_Generative_AI/       # GAN ve Diffusion örnekleri
+├── 📂 deepfake/                # Deepfake tespit dökümanları
+├── 📂 stegonografi/            # Gizli veri saklama teknikleri
+├── 📂 docs/                    # Ek okumalar (Ransomware, USOM vb.)
+├── 📂 assets/                  # Görsel materyaller
+└── 📄 requirements.txt         # Proje bağımlılıkları
 ```
 
 ---
 
-## 🛠️ Kurulum ve Kullanım
+## 🛠️ Kurulum ve Çalıştırma
 
-Projeyi yerel ortamınızda çalıştırmak için:
+Atölye materyallerini bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
 ### 1. Repoyu Klonlayın
 ```bash
@@ -70,132 +103,40 @@ git clone https://github.com/bahattinyunus/btk_atolye_multimedya_guvenligi.git
 cd btk_atolye_multimedya_guvenligi
 ```
 
-### 2. Sanal Ortam Oluşturun
+### 2. Sanal Ortam (Önerilen)
 ```bash
-# Windows
 python -m venv venv
+# Windows için:
 venv\Scripts\activate
-
-# Mac/Linux
+# Mac/Linux için:
 source venv/bin/activate
 ```
 
-### 3. Bağımlılıkları Yükleyin
+### 3. Kütüphaneleri Yükleyin
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Örnekleri Çalıştırın
-Örneğin, CNN modelini test etmek için:
+### 4. Örnek Bir Kod Çalıştırın
+Örneğin, CNN modelini eğitmek veya test etmek için:
 ```bash
-cd eğitim_kodları
+cd eğitim_kodları/02_Derin_Ogrenme
 python 10_cnnDenemesi.py
 ```
 
 ---
 
-## 🧠 Yapay Zeka ve Veri Güvenliği
-
-Yapay zeka, siber güvenlikte "kılıç ve kalkan" gibidir. Hem saldırı (deepfake üretimi) hem de savunma (anomali tespiti) tarafında kullanılır. Bu repo, savunma tarafına odaklanarak aşağıdaki hedefleri gözetir:
-
-*   **Erken Tespit**: Saldırıları gerçekleşmeden fark etme.
-*   **Veri Bütünlüğü**: İçerik manipülasyonunu (Deepfake) yakalama.
-*   **Telif Hakkı**: Dijital filigran (Watermarking) ile koruma.
-
----
-
-## 🔐 Uygulama Alanları
-
-### 1. Anomali Tespiti
-Sunucudaki olağan dışı trafik veya dosya erişimlerini (DDoS, yetkisiz erişim) `Isolation Forest` veya `Autoencoder` ile tespit etme.
-
-### 2. Deepfake Tespiti
-Yüz manipülasyonlarını, göz kırpma düzensizliklerini ve "texture artifact" hatalarını `CNN` ve `ViT` modelleriyle yakalama.
-
-### 3. Steganografi ve Filigran
-Görünmez verileri resim içine saklama veya saklanmış verileri (gizli mesaj, virüs) tespit etme.
-
----
-
-<div align="center">
-
-![Analysis Banner](assets/mid-banner.png)
-
-</div>
-
----
-
-## 🤖 Kullanılan Modeller
-
-| Alan | Model | Amaç |
-|------|-------|------|
-| **Görüntü İşleme** | CNN, ResNet | İçerik sınıflandırma ve deepfake analizi |
-| **Anomali** | Autoencoder, LSTM | Davranış analizi ve tehdit tespiti |
-| **Generative** | GAN, Diffusion | Filigran üretimi ve sentetik veri |
-
----
-
-## 🔐 Nasıl Çalışır? (Architecture)
-
-Aşağıdaki diyagram, bu repoda ele alınan güvenlik modelinin genel akışını gösterir:
-
-```mermaid
-graph TD
-    A[Multimedya İçeriği] -->|Giriş| B(Ön İşleme)
-    B --> C{Tehdit Tespiti?};
-    
-    C -->|Deepfake Analizi| D[CNN / ViT Modeli]
-    C -->|Anomali Tespiti| E[Autoencoder / LSTM]
-    C -->|Zararlı İçerik| F[Malware Scanner]
-    
-    D --> G{Bozulma Var mı?}
-    E --> G
-    
-    G -->|Evet| H[🚫 Erişim Engelle / Uyar]
-    G -->|Hayır| I[✅ Güvenli İçerik]
-    
-    I --> J[Filigran Ekleme (GAN/LSB)]
-    J --> K[Yayınla / Sakla]
-    
-    style A fill:#f9f,stroke:#333
-    style H fill:#f00,stroke:#333,color:white
-    style I fill:#0f0,stroke:#333
-```
-
----
-
-## 🗺️ Proje Yol Haritası (Roadmap)
-
-- [x] **Faz 1: Temel Güvenlik Modülleri** (Tamamlandı)
-    - [x] Temel ML algoritmaları
-    - [x] Basit GAN modelleri
-    - [x] CNN ile sınıflandırma
-
-- [ ] **Faz 2: İleri Seviye Tespit** (Devam Ediyor)
-    - [ ] Real-time Deepfake tespiti
-    - [ ] Ses manipülasyonu analizi
-    - [ ] Adversarial Attack savunması
-
-- [ ] **Faz 3: Entegrasyon**
-    - [ ] Web Arayüzü (Dashboard)
-    - [ ] API Servisi
-    - [ ] Browser Eklentisi
-
----
-
 ## 🤝 Katkıda Bulunma
 
+Bu proje eğitim amaçlıdır ve geliştirime açıktır. Hata bildirimleri veya yeni özellik eklemeleri için **Pull Request** gönderebilirsiniz.
 
-Bu proje açık kaynaklı bir eğitim projesidir. Katkılarınızı bekliyoruz!
-
-Lütfen katkıda bulunmadan önce şunları okuyun:
-*   [Katkıda Bulunma Rehberi (CONTRIBUTING.md)](CONTRIBUTING.md)
-*   [Davranış Kuralları (CODE_OF_CONDUCT.md)](CODE_OF_CONDUCT.md)
+Lütfen katkıda bulunmadan önce [CONTRIBUTING.md](CONTRIBUTING.md) dosyasını inceleyiniz.
 
 ---
 
 <div align="center">
 
-_BTK Atölye Eğitim Serisi_
+_Copyright © 2024 - BTK Akademi & Bahattin Yunus_
+_Tüm Hakları Saklıdır._
 
 </div>
